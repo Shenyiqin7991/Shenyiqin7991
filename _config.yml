@@ -18,3 +18,4 @@ valine:
 
 highlight:
   enable: false
+theme: jekyll-theme-cayman
