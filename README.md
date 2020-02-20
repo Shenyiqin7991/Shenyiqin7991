@@ -1,87 +1,238 @@
-**一款十分简洁的 Hexo 博客 Geek 主题**
+# Jekyll Theme Chirpy
 
-## 演示
+[![Build Status](https://github.com/cotes2020/jekyll-theme-chirpy/workflows/build/badge.svg?event=push)](https://github.com/cotes2020/jekyll-theme-chirpy/actions?query=event%3Apush)
+[![GitHub license](https://img.shields.io/github/license/cotes2020/jekyll-theme-chirpy.svg)](https://github.com/cotes2020/jekyll-theme-chirpy/blob/master/LICENSE)
+[![996.icu](https://img.shields.io/badge/link-996.icu-%23FF4D5B.svg)](https://996.icu)
 
-> 演示地址：https://geek.lc
+Language: English | [简体中文](docs/README_zh-CN.md)
 
-### 黑色风格
+A minimal, portfolio, sidebar, bootstrap Jekyll theme with responsive web design and focuses on text exhibition. It will help you easily record, manage and share your knowledge and experience. 
 
-![1.png](./imgs/1.png)
+You will get the following features:
 
-### 白色风格
+* Auto Dark Mode
+* Posts' Last Modified Date
+* Table of Contents
+* Automatically Recommend Related Posts
+* Syntax highlighting
+* Two Level Categories
+* Search
+* Atom Feeds
+* Disqus Comments
+* Google Analytics
+* GA Pageviews (Advanced)
+* SEO Tag
+* Performance Optimization
 
-![2.png](./imgs/2.png)
+[**Live Demo** »](https://chirpy.cotes.info)
 
-## 为什么要自己开发
+![devices-mockup](https://raw.githubusercontent.com/cotes2020/jekyll-theme-chirpy/master/assets/img/sample/devices-mockup.png)
 
-- 因为一直在用 `WordPress`，服务器奔溃，数据丢失了
-- 从此不想用笨重的程序了，所以采用纯静态博客，最后选择了 **`Hexo`**
-- 找了目前市面上的主题，没有我喜欢的简洁主题，于是亲自操刀(瞎折腾)搞了这款主题
-- 主题命名就是博客的域名 ：**`Geek`**
+## Table of Contents
 
-## 使用说明
-
-
-### 1.下载
-
-进入 **Hexo** -> **themes** 目录下
-
-命令下执行：
-
-```
- git clone https://github.com/sanjinhub/hexo-theme-geek.git geek 
-```
-
-or 
-
-进入 **Hexo** -> **themes** 目录下，下载主题解压到当前文件夹下，改名为 **geek**
+* [Installing](#installing)
+* [Usage](#usage)
+* [Contributing](#contributing)
+* [Credits](#credits)
+* [Support](#support)
+* [License](#license)
 
 
-### 2.修改主题
+## Installing
 
-修改 **hexo** -> **_config.yml** 的 **theme** 为 **geek**
+### Prerequisites
 
-### 3.配置主题
+Follow the [Jekyll Docs](https://jekyllrb.com/docs/installation/) to complete the installtion of basic environment (Ruby, RubyGem, Bundler and Jekyll). In order to use the script tools to save time, we also need to install [Python](https://www.python.org/downloads/)(version 3.5 or abover) and [ruamel.yaml](https://pypi.org/project/ruamel.yaml/).
 
-```
-# 首页博客名称
-logo_title: GEEK 三斤
+In addition, if your machine is running Debian or macOS, make sure you have the [GNU coreutils](https://www.gnu.org/software/coreutils/) installed. Otherwise, get it by:
 
-# 默认主题风格 black or white
-style: black
+* Debian
 
-# 主题 ico
-favicon: /favicon.ico
-
-# 主题菜单
-# 需要新建页面：hexo new page "页面地址"
-menu:
-  作品: /project
-  域名: /domain
-  友联: /links
-  关于: /about
-  Github: https://github.com/sanjinhub
-
-# valine 评论 , 使用说明见 https://valine.js.org
-# 做了域名限制，请改成自己的 KEY
-valine:
-  appId: CmCti21ooOOIzFOhEyFkFvR0-gzGzoHsz
-  appKey: FqiyUqbg7McKN2eG0MCewupf
-
-# 关闭 Hexo 自带代码高亮
-highlight:
-  enable: false
+```console
+$ sudo apt-get install coreutils
 ```
 
-## 贡献者
+* macOS
 
-> 感谢所有这些优秀的贡献者们
+```console
+$ brew install coreutils
+```
 
-<table>
-  <tr>
-    <td align="center"><a target="_bank" href="https://github.com/sanjinhub">
-      <img src="https://avatars1.githubusercontent.com/u/53846155?s=460&v=4" width="100px;"  height="100px;" alt=""/>
-      <div><sub><b>SanJin</b></sub><div></a></td>
-    <td align="center"><a target="_bank" href="https://github.com/li-xunhuan"><img src="https://avatars2.githubusercontent.com/u/10476982?s=460&v=4" width="100px;" height="100px;"  alt=""/><div><sub><b>李寻欢</b></sub><div></a></td>
-  </tr>
-</table>
+
+### Jekyll Plugins
+
+[Fork **Chirpy** from GitHub](https://github.com/cotes2020/jekyll-theme-chirpy/fork), then clone your forked repo to local:
+
+```console
+$ git clone git@github.com:USER/jekyll-theme-chirpy.git
+```
+
+replace the `USER` above to your GitHub username.
+
+The first time you run or build the project on your machine, perform the installation of Jekyll plugins. Go to the root of repo and run:
+
+```terminal
+$ bundle install
+```
+
+`bundle` will automatically install all the dependent Jekyll Plugins that listed in the `Gemfile`.
+
+
+## Usage
+
+
+### Directory Structure
+
+The main files and related brief introductions are listed below.
+
+```sh
+jekyll-theme-chirpy/
+├── _data
+├── _includes      
+├── _layouts
+├── _posts          # posts stay here
+├── _scripts
+├── .travis.yml     # remove it
+├── .github         # remove this, too
+├── assets      
+├── tabs
+│   └── about.md    # the ABOUT page
+├── .gitignore
+├── 404.html
+├── Gemfile
+├── LICENSE
+├── README.md
+├── _config.yml     # configuration file
+├── tools           # script tools
+├── docs
+├── feed.xml
+├── index.html
+├── robots.txt
+└── sitemap.xml
+```
+
+
+As mentioned above, some files or directories should be removed from your repo:
+
+- .travis.yml
+- .github
+
+
+### Customization
+
+Basically, go to `_config.yml` and customize the variables as needed, some of them are typical options:
+
+* Avatar
+    
+    `avatar` defines the source image location. The sample image is `/assets/img/sample/avatar.jpg`. It should be replaced by your own one. Notice that a huge image file will increase the load time of your site, so keep your avatar size as samll as possible(may be *<https://tinypng.com/>* will help).
+
+* TimeZone
+
+    To ensure that the posts' release date matches the city you live in, please modify the field `timezone` correctly. A list of all available values can be found on [TimezoneConverter](http://www.timezoneconverter.com/cgi-bin/findzone/findzone) or [Wikipedia](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones).
+
+
+###  Run Locally
+
+You may want to preview the site before publishing, so just run the script tool:
+
+```terminal
+$ bash tools/run.sh
+```
+
+Open a modern brower and visit at <http://localhost:4000>.
+
+Few days later, you may find that the file modification(e.g. edits to a post) does not refresh in real time by using `run.sh`. Don't worry, the advanced option `-r` (or `--realtime`) will solve this problem, but it requires [**fswatch**](http://emcrisostomo.github.io/fswatch/) to be installed on your machine. Type `-h` for more information.
+
+###  Deploying to GitHub Pages
+
+Before the deployment begins, ensure the `url` in file `_config.yml` has been set to `https://<username>.github.io`(or the custom domain, if you have. e.g. `https://yourdomain.com`). What's more, if you prefer to the [Project site](https://help.github.com/en/github/working-with-github-pages/about-github-pages#types-of-github-pages-sites), change `baseurl` of file `_config.yml` to your project name, starting with a slash. e.g. `/project`.
+
+#### Option 1: Built by GitHub Pages
+
+By deploying the site in this way, you're allowed to push the source code directly to the remote.
+
+> **Note**: If you want to use any third-party Jekyll plugins that not in [this list](https://pages.github.com/versions/), stop reading the current approach and go to [*Option 2: Build locally*](#option-2-build-locally).
+
+**1**. Rename the repository to:
+
+|Site Type | Repo's Name|
+|:---|:---|
+|User or Organization | `<username>.github.io`|
+|Project| any one except `<username>.github.io`, let's say `project`|
+
+**2**. Commit the changes of the repo first, then run the initialization script:
+
+```terminal
+$ bash tools/init.sh
+```
+
+>**Note**: The *Recent Update* requires the posts' latest git-log date, so make sure the changes in `_posts` have been committed before running this command.
+
+it will automatically generates the *Latest Modified Date* and *Categories / Tags* page for the posts.
+
+**3**. Push the changes to `origin/master` then go to GitHub website and enable GitHub Pages service for the repo.
+
+**4**. Check it out:
+
+|Site Type | Site URL |
+|:---|:---|
+|User or Organization | `https://<username>.github.io/`|
+|Project| `https://<username>.github.io/project/`|
+
+
+#### Option 2: Build Locally
+
+For security reasons, GitHub Pages runs on `safe` mode, which means the third-party Jekyll plugins or custom scripts won't work. If you want to use any another plugins that not in the [whitelist](https://pages.github.com/versions/), **you have to generate the site locally rather than on GitHub Pages**.
+
+**1**. Browse to GitHub website, create a brand new repo named: 
+
+|Site Type | Repo's Name|
+|:---|:---|
+|User or Organization | `<username>.github.io`|
+|Project| any one except `<username>.github.io`, let's say `project`|
+
+and clone it.
+
+**2**. In the root of the source project, build your site by:
+
+```console
+$ bash tools/build.sh -d /path/to/local/project/
+```
+
+The generated static files will be placed in the root of `/path/to/local/project`. Commit and push the changes to the `master` branch on GitHub.
+
+**3**. Go to GitHub website and enable Pages service for the new repository.
+
+**4**. Visit at:
+
+|Site Type | Site URL |
+|:---|:---|
+|User or Organization | `https://<username>.github.io/`|
+|Project| `https://<username>.github.io/project/`|
+
+and enjoy!
+
+### Documentation
+
+For more details and the better reading experience, please check out the [tutorial in demo site](https://chirpy.cotes.info/categories/tutorial/). In the meanwhile, a copy of the tutorial is also available on the [Wiki](https://github.com/cotes2020/jekyll-theme-chirpy/wiki).
+
+## Contributing
+
+The old saying: "Tow heads are better than one. Five heads are better than two." So, welcome to report bugs, improve code quality or submit a new feature. For more information, see [contributing guidelines](.github/CONTRIBUTING.md).
+
+
+## Credits
+
+This theme is mainly built with [Jekyll](https://jekyllrb.com/) ecosystem, [Bootstrap](https://getbootstrap.com/), [Font Awesome](https://fontawesome.com/) and some other wonderful tools(their copyright information can be found in the relevant files).
+
+:tada:Thanks to all the volunteers who contributed to this project, their github ID is on [this list](https://github.com/cotes2020/jekyll-theme-chirpy/graphs/contributors). Also, I won't forget the guys who submitted the issues(or unmerged PR), they reported bugs, shared ideas or inspired me to write more readable documentation.
+
+
+## Support
+
+If you enjoy this theme or find it helpful, please consider becoming my sponsor, I'd really appreciate it! Click the button <kbd>:heart:Sponsor</kbd> at the top of the [Home Page](https://github.com/cotes2020/jekyll-theme-chirpy) and choose a link that suits you to donate. This will encourage me and help me maintain this project.
+
+
+## License
+
+This work is published under [MIT](https://github.com/cotes2020/jekyll-theme-chirpy/blob/master/LICENSE) License.
