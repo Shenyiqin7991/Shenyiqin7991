@@ -2461,3 +2461,7 @@ ul.links li:hover .bg {
     header {background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),url(https://i.loli.net/2021/10/07/LxgOvVkYc6oqt57.jpg);}
     
     
+    .valine {
+        display: none;
+      }
+    
