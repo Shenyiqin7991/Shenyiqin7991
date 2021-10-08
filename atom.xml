@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://shenyiqin7991.github.io/</id>
     <title>陟彼南山</title>
-    <updated>2021-10-08T11:45:26.289Z</updated>
+    <updated>2021-10-08T14:36:22.906Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://shenyiqin7991.github.io/"/>
     <link rel="self" href="https://shenyiqin7991.github.io/atom.xml"/>
@@ -10,4 +10,15 @@
     <logo>https://shenyiqin7991.github.io/images/avatar.png</logo>
     <icon>https://shenyiqin7991.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, 陟彼南山</rights>
+    <entry>
+        <title type="html"><![CDATA[几个实用的命令]]></title>
+        <id>https://shenyiqin7991.github.io/post/ji-ge-shi-yong-de-ming-ling/</id>
+        <link href="https://shenyiqin7991.github.io/post/ji-ge-shi-yong-de-ming-ling/">
+        </link>
+        <updated>2021-10-08T14:15:57.000Z</updated>
+        <summary type="html"><![CDATA[<p>可以借助excel 方便的复制出多条命令   另存 bat 文件</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>可以借助excel 方便的复制出多条命令   另存 bat 文件</p>
+]]></content>
+    </entry>
 </feed>
